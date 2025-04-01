@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body id="weatherImage">
+    <div class="zipcode">
+        <form method="post" action="/getWeather" >
+            <label>Zipcode: </label>
+            <input type="text" name="zipcode" placeholder="Check weather">
+            <button type="submit"> Enter </button>
+        </form>
+    </div>
+    <div class="center">
+        <% if (locals.content) {%>
+            <h2>Weather: <%= content.weather[0].description %></h2>
+            <h3>Temperture: <%= content.main.temp %></h3>
+            <script>
+                let temp = `<%= content.main.temp %>`;
+            </script>
+        <% }%>
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>

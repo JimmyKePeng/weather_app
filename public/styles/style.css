@@ -1,0 +1,13 @@
+body{
+    background-image: url("/images/sunny.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display:grid;
+    align-items: center;
+    justify-content: center;
+}
+.zipcode{
+    margin: 3rem;
+
+}
